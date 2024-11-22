@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package auction;
+
+service AuctionService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+    rpc CreateLot (CreateLotRequest) returns (CreateLotResponse);
+    rpc PlaceBid (PlaceBidRequest) returns (PlaceBidResponse);
+    rpc CloseAuction (CloseAuctionRequest) returns (CloseAuctionResponse);
+}
+
+message CreateUserRequest {
+    string name = 1;
+    double balance = 2;
+}
+
+message CreateUserResponse {
+    int32 id = 1;
+}
+
+message CreateLotRequest {
+    string name = 1;
+    string description = 2;
+    double start_price = 3;
+    int32 seller_id = 4;
+}
+
+message CreateLotResponse {
+    int32 id = 1;
+}
+
+message PlaceBidRequest {
+    double amount = 1;
+    int32 lot_id = 2;
+    int32 bidder_id = 3;
+}
+
+message PlaceBidResponse {
+    int32 id = 1;
+}
+
+message CloseAuctionRequest {
+    int32 lot_id = 1;
+}
+
+message CloseAuctionResponse {
+    int32 winner_id = 1;
+}
