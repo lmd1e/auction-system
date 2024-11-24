@@ -60,7 +60,7 @@ func (w *AuctionWorker) processEndedAuctions(ctx context.Context) {
 		}
 
 		if winnerID > 0 {
-			winner, err := w.userRepo.GetUserByID(winnerID)
+			_, err := w.userRepo.GetUserByID(winnerID)
 			if err != nil {
 				log.Printf("failed to get winner user %d: %v", winnerID, err)
 				continue

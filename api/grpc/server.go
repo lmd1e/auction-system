@@ -1,7 +1,7 @@
 package grpc
 
 import (
-	"auction-system/api/grpc/auction"
+	"auction-system/api/grpc/proto/auction"
 	"auction-system/domain/entities"
 	"auction-system/domain/repositories"
 	"context"

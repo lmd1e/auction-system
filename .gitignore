@@ -1,1 +1,6 @@
-go.mod
+bin/
+backups/
+.env
+*.exe
+*.xlsx
+*.log

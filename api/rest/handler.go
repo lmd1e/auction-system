@@ -1,7 +1,6 @@
 package rest
 
 import (
-	"auction-system/api/grpc/auction"
 	"context"
 	"net/http"
 

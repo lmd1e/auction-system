@@ -1,4 +1,4 @@
-package data
+package data_access
 
 import (
 	"auction-system/domain/entities"
